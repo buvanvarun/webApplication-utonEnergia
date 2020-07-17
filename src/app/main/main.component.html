@@ -1,0 +1,16 @@
+<main>
+  <header>
+    <h3>Welcome Buvan</h3>
+    <h3>Select your tasks for the day</h3>
+  </header>
+  <section>
+    <div class="app-options-container">
+      <div *ngFor="let option of options" class="app-option">
+        <h2 class="app-option-text">{{ option }}</h2>
+        <div id="{{ option }}" (click)="onToggle($event)" class="toggle-btn">
+          <div class="inner-circle"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

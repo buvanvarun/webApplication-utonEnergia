@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  height: 8vh;
+  position: sticky;
+  top: 0;
+  background-color: #000000;
+  align-items: center;
+  z-index: 5;
+}
+.head-content {
+  padding: 10px;
+  padding-top: 15px;
+  font-size: 22px;
+  color: white;
+}
+.signin-home-link {
+  text-decoration: none;
+}
+section {
+  height: 100vh;
+}
+.section-wrapper {
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  transform: translateY(100px);
+  transition: all 0.5s;
+}
+
+.section-wrapper.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.email-section {
+  width: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  overflow: hidden;
+}
+
+.email-section input {
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.email-section label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.email-section label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5fa8d3;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-email {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.email-section input:focus + .label-email .content-email,
+.email-section input:valid + .label-email .content-email {
+  transform: translateY(-120%);
+  color: #5fa8d3;
+}
+
+.email-section input:focus + .label-email::after,
+.email-section input:valid + .label-email::after {
+  transform: translateX(0%);
+}
+
+.password-section {
+  width: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  overflow: hidden;
+}
+
+.password-section input {
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.password-section label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.password-section label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5fa8d3;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-password {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.password-section input:focus + .label-password .content-password,
+.password-section input:valid + .label-password .content-password {
+  transform: translateY(-120%);
+  color: #5fa8d3;
+}
+
+.password-section input:focus + .label-password::after,
+.password-section input:valid + .label-password::after {
+  transform: translateX(0%);
+}
+
+.eye {
+  position: relative;
+  left: 95%;
+  top: 70%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.signin-btn-container {
+  position: relative;
+  top: 50%;
+  left: 25%;
+}
+
+.signin-btn {
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 20px;
+}
+
+.signin-btn:active,
+.signin-btn:focus {
+  outline: none;
+}

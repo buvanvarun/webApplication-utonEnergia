@@ -1,0 +1,47 @@
+header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.app-options-container {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.app-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: space-between;
+}
+
+.toggle-btn {
+  width: 45px;
+  height: 27px;
+  background: gray;
+  border-radius: 30px;
+  padding: 3px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn > .inner-circle {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn.active {
+  background: #18b84f;
+}
+
+.toggle-btn.active > .inner-circle {
+  margin-left: 19px;
+}
