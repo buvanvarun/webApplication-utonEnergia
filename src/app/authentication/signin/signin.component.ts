@@ -20,18 +20,14 @@ export class SigninComponent implements OnInit {
 
   ngOnInit(): void {
     this.sections = document.querySelectorAll('section');
-
-    // this.init();
+    // this.sections.forEach((section, i) => {
+    //   if (i === 0) {
+    //     section.querySelector('.section-wrapper').classList.add('show');
+    //   }
+    // });
     this.scrollSection();
     this.keyDown();
   }
-  init = () => {
-    this.sections.forEach((section, i) => {
-      if (i === 0) {
-        section.querySelector('.section-wrapper').classList.add('show');
-      }
-    });
-  };
 
   onVisible = () => {
     this.visible = this.visible === true ? false : true;

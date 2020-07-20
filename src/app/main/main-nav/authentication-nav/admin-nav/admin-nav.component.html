@@ -1,0 +1,14 @@
+<main>
+  <div class="admin-nav-container">
+    <div class="admin-nav">
+      <div *ngFor="let admin of admins" class="admin">
+        <button id="{{ admin }}" class="admin-btn">
+          {{ admin }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="admin-nav-details-container">
+    <div class="admin-nav-details"></div>
+  </div>
+</main>

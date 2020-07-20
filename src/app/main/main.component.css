@@ -45,3 +45,39 @@ header {
 .toggle-btn.active > .inner-circle {
   margin-left: 19px;
 }
+
+.submit-btn-container {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.submit-btn {
+  background-color: #18b84f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 6px 6px;
+  cursor: pointer;
+}
+
+.submit-btn:disabled {
+  background-color: gray;
+}
+
+.submit-bnt:focus,
+.submit-btn:active {
+  outline: none;
+}
+
+.hide {
+  display: none;
+}
+
+app-profile {
+  position: absolute;
+  left: 4%;
+  top: 0;
+}

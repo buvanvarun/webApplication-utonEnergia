@@ -19,11 +19,11 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.sections = document.querySelectorAll('section');
-    this.sections.forEach((section, i) => {
-      if (i === 0) {
-        section.querySelector('.section-wrapper').classList.add('show');
-      }
-    });
+    // this.sections.forEach((section, i) => {
+    //   if (i === 0) {
+    //     section.querySelector('.section-wrapper').classList.add('show');
+    //   }
+    // });
     this.scrollSection();
     this.keyDown();
   }

@@ -1,9 +1,9 @@
 <main>
-  <header>
-    <h3>Welcome Buvan</h3>
-    <h3>Select your tasks for the day</h3>
-  </header>
-  <section>
+  <section id="options-section">
+    <header>
+      <h3>Welcome Buvan</h3>
+      <h3>Select your tasks for the day</h3>
+    </header>
     <div class="app-options-container">
       <div *ngFor="let option of options" class="app-option">
         <h2 class="app-option-text">{{ option }}</h2>
@@ -12,5 +12,21 @@
         </div>
       </div>
     </div>
+    <div class="submit-btn-container">
+      <button
+        (click)="onSubmit()"
+        [disabled]="!disableSubmit"
+        class="submit-btn"
+      >
+        Submit
+      </button>
+    </div>
+  </section>
+  <section id="main-section">
+    <app-left-nav></app-left-nav>
+    <app-profile></app-profile>
+    <!-- <app-map></app-map> -->
+    <app-authentication-main-nav class="hide"></app-authentication-main-nav>
+    <app-admin-nav class="hide"></app-admin-nav>
   </section>
 </main>
