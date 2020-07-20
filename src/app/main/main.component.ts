@@ -36,6 +36,14 @@ export class MainComponent implements OnInit {
         }
       }
     );
+
+    this._mainInteractionService.toggleAdmin$.subscribe((adminState) => {
+      if (adminState) {
+        document.querySelector('app-admin-nav').classList.remove('hide');
+      } else {
+        document.querySelector('app-admin-nav').classList.add('hide');
+      }
+    });
   }
 
   onToggle = (event: Event) => {

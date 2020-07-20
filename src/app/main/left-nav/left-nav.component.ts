@@ -15,5 +15,6 @@ export class LeftNavComponent implements OnInit {
   authentication = () => {
     this.toggleAuth = this.toggleAuth ? false : true;
     this._mainInteractionService.toggleAuthentication(this.toggleAuth);
+    this._mainInteractionService.toggleAdmin(false);
   };
 }
