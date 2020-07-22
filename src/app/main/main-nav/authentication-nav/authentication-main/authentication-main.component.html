@@ -1,26 +1,33 @@
 <main>
   <div class="authentication-main-container">
     <div class="authentication-main-nav">
-      <div (click)="onAdminClick()" class="authentication-main-admin">
-        <button class="authentication-main-btn">
+      <div class="authentication-main-admin">
+        <button (click)="onAdminClick()" class="authentication-main-btn">
           Admin
         </button>
       </div>
       <div class="authentication-main-admin">
-        <button class="authentication-main-btn">
+        <button (click)="onUserClick()" class="authentication-main-btn">
           User
         </button>
       </div>
       <div class="authentication-main-admin">
-        <button class="authentication-main-btn">
+        <button
+          (click)="onSwappingStationClick()"
+          class="authentication-main-btn"
+        >
           Swapping Station
         </button>
       </div>
       <div class="authentication-main-admin">
-        <button class="authentication-main-btn">
+        <button (click)="onFleetClick()" class="authentication-main-btn">
           Fleet
         </button>
       </div>
     </div>
   </div>
+  <app-admin-nav class="hide"></app-admin-nav>
+  <app-user-nav class="hide"></app-user-nav>
+  <app-swapping-station-nav class="hide"></app-swapping-station-nav>
+  <app-fleet-nav class="hide"></app-fleet-nav>
 </main>

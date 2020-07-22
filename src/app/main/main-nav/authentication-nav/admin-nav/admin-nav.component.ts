@@ -18,7 +18,7 @@ export class AdminNavComponent implements OnInit {
   ];
   option;
   choosenOption = [0, 0, 0, 0, 0, 0, 0, 0];
-  admins = ['Buvan', 'Varun', 'Harsha', 'Seenu'];
+  admins = ['Buvan', 'Varun', 'Harsha', 'Seenu', 'five'];
   stats = [
     {
       task: 'parking',
