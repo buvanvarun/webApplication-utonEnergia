@@ -10,6 +10,9 @@ import { AgmCoreModule } from '@agm/core';
 import { ProfileComponent } from './main/profile/profile.component';
 import { AuthenticationMainComponent } from './main/main-nav/authentication-nav/authentication-main/authentication-main.component';
 import { AdminNavComponent } from './main/main-nav/authentication-nav/admin-nav/admin-nav.component';
+import { UserNavComponent } from './main/main-nav/authentication-nav/user-nav/user-nav.component';
+import { SwappingStationNavComponent } from './main/main-nav/authentication-nav/swapping-station-nav/swapping-station-nav.component';
+import { FleetNavComponent } from './main/main-nav/authentication-nav/fleet-nav/fleet-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +22,9 @@ import { AdminNavComponent } from './main/main-nav/authentication-nav/admin-nav/
     ProfileComponent,
     AuthenticationMainComponent,
     AdminNavComponent,
+    UserNavComponent,
+    SwappingStationNavComponent,
+    FleetNavComponent,
   ],
   imports: [
     BrowserModule,

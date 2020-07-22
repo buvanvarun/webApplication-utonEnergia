@@ -7,16 +7,15 @@ import { MainInteractionService } from '../../../main-interaction.service';
 })
 export class AuthenticationMainComponent implements OnInit {
   constructor(private _mainInteractionService: MainInteractionService) {}
+  toggleAdmin: boolean;
 
-  toggleAdmin: boolean = false;
-
+  ngOnInit(): void {
+    this._mainInteractionService.toggleAdmin$.subscribe((adminState) => {
+      this.toggleAdmin = adminState;
+    });
+  }
   onAdminClick = () => {
     this.toggleAdmin = this.toggleAdmin ? false : true;
     this._mainInteractionService.toggleAdmin(this.toggleAdmin);
-    // the authentication panel must disappear in the main component
-
-    // the admincomponent and the admin details must show up
   };
-
-  ngOnInit(): void {}
 }

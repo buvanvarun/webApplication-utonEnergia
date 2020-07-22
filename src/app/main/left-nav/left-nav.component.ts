@@ -9,8 +9,14 @@ import { MainInteractionService } from '../main-interaction.service';
 export class LeftNavComponent implements OnInit {
   constructor(private _mainInteractionService: MainInteractionService) {}
 
-  toggleAuth: boolean = false;
-  ngOnInit(): void {}
+  toggleAuth: boolean;
+  ngOnInit(): void {
+    this._mainInteractionService.toggleAuthentication$.subscribe(
+      (authState) => {
+        this.toggleAuth = authState;
+      }
+    );
+  }
 
   authentication = () => {
     this.toggleAuth = this.toggleAuth ? false : true;
