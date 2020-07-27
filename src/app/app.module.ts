@@ -13,6 +13,11 @@ import { AdminNavComponent } from './main/main-nav/authentication-nav/admin-nav/
 import { UserNavComponent } from './main/main-nav/authentication-nav/user-nav/user-nav.component';
 import { SwappingStationNavComponent } from './main/main-nav/authentication-nav/swapping-station-nav/swapping-station-nav.component';
 import { FleetNavComponent } from './main/main-nav/authentication-nav/fleet-nav/fleet-nav.component';
+import { RealTimeMainComponent } from './main/main-nav/realTime-nav/real-time-main/real-time-main.component';
+import { VechicleNavComponent } from './main/main-nav/realTime-nav/vechicle-nav/vechicle-nav.component';
+import { BatteryNavComponent } from './main/main-nav/realTime-nav/battery-nav/battery-nav.component';
+import { FleetRealtimeNavComponent } from './main/main-nav/realTime-nav/fleet-realtime-nav/fleet-realtime-nav.component';
+import { DockStationNavComponent } from './main/main-nav/realTime-nav/dock-station-nav/dock-station-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +30,11 @@ import { FleetNavComponent } from './main/main-nav/authentication-nav/fleet-nav/
     UserNavComponent,
     SwappingStationNavComponent,
     FleetNavComponent,
+    RealTimeMainComponent,
+    VechicleNavComponent,
+    BatteryNavComponent,
+    FleetRealtimeNavComponent,
+    DockStationNavComponent,
   ],
   imports: [
     BrowserModule,

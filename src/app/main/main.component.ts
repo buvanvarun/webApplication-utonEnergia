@@ -21,8 +21,7 @@ export class MainComponent implements OnInit {
   disableSubmit = false;
   constructor(private _mainInteractionService: MainInteractionService) {}
 
-  ngOnInit(): void {
-    document.getElementById('main-section').classList.add('hide');
+  setAuthenticationState = () => {
     this._mainInteractionService.toggleAuthentication$.subscribe(
       (authState) => {
         if (authState) {
@@ -36,6 +35,23 @@ export class MainComponent implements OnInit {
         }
       }
     );
+  };
+
+  setRealTimeState = () => {
+    this._mainInteractionService.toggleRealTime$.subscribe((authState) => {
+      if (authState) {
+        document.querySelector('app-real-time-main').classList.remove('hide');
+      } else {
+        document.querySelector('app-real-time-main').classList.add('hide');
+      }
+    });
+  };
+
+  ngOnInit(): void {
+    document.getElementById('main-section').classList.add('hide');
+
+    this.setAuthenticationState();
+    this.setRealTimeState();
   }
 
   onToggle = (event: Event) => {

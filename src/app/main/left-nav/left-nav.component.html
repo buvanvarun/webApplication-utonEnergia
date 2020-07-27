@@ -5,7 +5,7 @@
     </div>
     <div class="left-nav-nav">
       <div class="authentication-container">
-        <button (click)="authentication()" class="authentication-btn">
+        <button (click)="onAuthentication()" class="authentication-btn">
           <svg
             width="3.5rem"
             height="3.5rem"
@@ -22,7 +22,7 @@
         </button>
       </div>
       <div class="location-container">
-        <button class="location-btn">
+        <button (click)="onLocation()" class="location-btn">
           <svg
             width="3em"
             height="3em"

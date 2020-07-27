@@ -24,6 +24,18 @@ export class AuthenticationMainComponent implements OnInit {
     });
   };
 
+  getSwapState = () => {
+    this._mainInteractionService.toggleSwap$.subscribe((swapState) => {
+      this.toggleSwap = swapState;
+    });
+  };
+
+  getFleetState = () => {
+    this._mainInteractionService.toggleFleet$.subscribe((fleetState) => {
+      this.toggleFleet = fleetState;
+    });
+  };
+
   setAdminState = () => {
     this._mainInteractionService.toggleAdmin$.subscribe((adminState) => {
       if (adminState) {
@@ -44,27 +56,70 @@ export class AuthenticationMainComponent implements OnInit {
     });
   };
 
+  setSwapState = () => {
+    this._mainInteractionService.toggleSwap$.subscribe((swapState) => {
+      if (swapState) {
+        document
+          .querySelector('app-swapping-station-nav')
+          .classList.remove('hide');
+      } else {
+        document
+          .querySelector('app-swapping-station-nav')
+          .classList.add('hide');
+      }
+    });
+  };
+
+  setFleetState = () => {
+    this._mainInteractionService.toggleFleet$.subscribe((fleetState) => {
+      if (fleetState) {
+        document.querySelector('app-fleet-nav').classList.remove('hide');
+      } else {
+        document.querySelector('app-fleet-nav').classList.add('hide');
+      }
+    });
+  };
+
   ngOnInit(): void {
     this.getAdminState();
     this.getUserState();
+    this.getSwapState();
+    this.getFleetState();
 
     this.setAdminState();
     this.setUserState();
+    this.setSwapState();
+    this.setFleetState();
   }
   onAdminClick = () => {
     this.toggleAdmin = this.toggleAdmin ? false : true;
     this._mainInteractionService.toggleAdmin(this.toggleAdmin);
     this._mainInteractionService.toggleUser(false);
+    this._mainInteractionService.toggleSwap(false);
+    this._mainInteractionService.toggleFleet(false);
   };
 
   onUserClick = () => {
     this.toggleUser = this.toggleUser ? false : true;
     this._mainInteractionService.toggleUser(this.toggleUser);
     this._mainInteractionService.toggleAdmin(false);
-    console.log(this.toggleUser);
+    this._mainInteractionService.toggleSwap(false);
+    this._mainInteractionService.toggleFleet(false);
   };
 
-  onSwappingStationClick = () => {};
+  onSwappingStationClick = () => {
+    this.toggleSwap = this.toggleSwap ? false : true;
+    this._mainInteractionService.toggleSwap(this.toggleSwap);
+    this._mainInteractionService.toggleAdmin(false);
+    this._mainInteractionService.toggleUser(false);
+    this._mainInteractionService.toggleFleet(false);
+  };
 
-  onFleetClick = () => {};
+  onFleetClick = () => {
+    this.toggleFleet = this.toggleFleet ? false : true;
+    this._mainInteractionService.toggleFleet(this.toggleFleet);
+    this._mainInteractionService.toggleAdmin(false);
+    this._mainInteractionService.toggleUser(false);
+    this._mainInteractionService.toggleSwap(false);
+  };
 }

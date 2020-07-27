@@ -63,4 +63,8 @@ export class UserNavComponent implements OnInit {
   onViewFeedBack = () => {
     console.log('view feedback');
   };
+
+  onCoupon = () => {
+    console.log('send coupon');
+  };
 }

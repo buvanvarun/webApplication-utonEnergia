@@ -1,7 +1,7 @@
 .user-nav-container {
   position: absolute;
   width: 15vw;
-  background-color: #f8f8f8;
+  background-color: #353b48;
   border: 1px solid black;
   border-radius: 30px;
   top: 24vh;
@@ -30,7 +30,7 @@
 }
 
 .user-btn {
-  background-color: black;
+  background-color: #4b4b4b;
   color: white;
   padding: 6px 6px;
   font-size: 18px;
@@ -41,9 +41,10 @@
 .user-nav-location-container {
   position: absolute;
   width: 15vw;
-  background-color: #f8f8f8;
+  background-color: #192a56;
   border: 1px solid black;
-  border-radius: 30px;
+  box-shadow: 1px 1px 1px 1px #2c3a47;
+  border-radius: 16px;
   top: 66vh;
   left: 20.5%;
   height: 30vh;
@@ -72,7 +73,7 @@
   position: absolute;
   width: 60vw;
   height: 60vh;
-  background-color: #f8f8f8;
+  background-color: #f1f1f1;
   border: 1px solid black;
   border-radius: 30px;
   top: 26vh;
@@ -129,7 +130,21 @@
   background-color: black;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 14px;
+  font-size: 16px;
+  padding: 6px 6px;
+}
+
+.user-nav-profile-coupon-btn-container {
+  position: relative;
+  top: 40px;
+  left: 20px;
+}
+.user-nav-profile-coupon-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 14px;
   font-size: 16px;
   padding: 6px 6px;
 }

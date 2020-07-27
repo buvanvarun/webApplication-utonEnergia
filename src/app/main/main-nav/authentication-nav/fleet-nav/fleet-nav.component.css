@@ -1,0 +1,182 @@
+.fleet-nav-container {
+  position: absolute;
+  width: 15vw;
+  background-color: #f8f8f8;
+  border: 1px solid black;
+  border-radius: 30px;
+  top: 26vh;
+  left: 20.5%;
+  height: 60vh;
+  /* overflow-blo */
+}
+
+.fleet-nav {
+  height: 100%;
+  position: relative;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.fleet {
+  padding: 10px;
+}
+
+.fleet-btn {
+  background-color: black;
+  color: white;
+  padding: 6px 6px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+}
+
+.fleet-nav-details-container {
+  position: absolute;
+  width: 60vw;
+  height: 60vh;
+  background-color: #f8f8f8;
+  border: 1px solid black;
+  border-radius: 30px;
+  top: 26vh;
+  left: 36.5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.fleet-nav-profile-details-container {
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+.fleet-nav-profile-img-container {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.fleet-nav-profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.fleet-nav-profile-details {
+  width: 200px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.fleet-nav-profile-details h3 {
+  font-size: 16px;
+  font-weight: 300;
+  color: #1d1d1f;
+}
+
+.fleet-nav-profile-credentials-container {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.fleet-nav-profile-credentials {
+  width: 40px;
+  height: 40px;
+}
+
+.fleet-nav-profile-block-btn-container {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.fleet-nav-profile-block-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  padding: 6px 6px;
+}
+.fleet-nav-profile-stats-container {
+  position: relative;
+  left: 80px;
+  top: 40px;
+}
+.fleet-nav-profile-stats {
+  align-items: center;
+}
+
+th,
+td {
+  padding: 10px;
+}
+tr {
+  font-size: 16px;
+}
+
+.fleet-nav-block-modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+.fleet-nav-block-modal {
+  position: relative;
+  background-color: white;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fleet-nav-block-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.fleet-nav-block-btn-yes {
+  background-color: black;
+  color: white;
+  padding: 6px 6px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+}
+.fleet-nav-block-btn-no {
+  background-color: black;
+  color: white;
+  padding: 6px 6px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.fleet-nav-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
