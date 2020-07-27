@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MainInteractionService } from './main-interaction.service';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -19,39 +18,10 @@ export class MainComponent implements OnInit {
   option;
   choosenOption = [0, 0, 0, 0, 0, 0, 0, 0];
   disableSubmit = false;
-  constructor(private _mainInteractionService: MainInteractionService) {}
-
-  setAuthenticationState = () => {
-    this._mainInteractionService.toggleAuthentication$.subscribe(
-      (authState) => {
-        if (authState) {
-          document
-            .querySelector('app-authentication-main-nav')
-            .classList.remove('hide');
-        } else {
-          document
-            .querySelector('app-authentication-main-nav')
-            .classList.add('hide');
-        }
-      }
-    );
-  };
-
-  setRealTimeState = () => {
-    this._mainInteractionService.toggleRealTime$.subscribe((authState) => {
-      if (authState) {
-        document.querySelector('app-real-time-main').classList.remove('hide');
-      } else {
-        document.querySelector('app-real-time-main').classList.add('hide');
-      }
-    });
-  };
+  constructor() {}
 
   ngOnInit(): void {
     document.getElementById('main-section').classList.add('hide');
-
-    this.setAuthenticationState();
-    this.setRealTimeState();
   }
 
   onToggle = (event: Event) => {

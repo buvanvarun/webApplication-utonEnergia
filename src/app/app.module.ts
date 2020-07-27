@@ -8,7 +8,6 @@ import { MapComponent } from './main/map/map.component';
 import { LeftNavComponent } from './main/left-nav/left-nav.component';
 import { AgmCoreModule } from '@agm/core';
 import { ProfileComponent } from './main/profile/profile.component';
-import { AuthenticationMainComponent } from './main/main-nav/authentication-nav/authentication-main/authentication-main.component';
 import { AdminNavComponent } from './main/main-nav/authentication-nav/admin-nav/admin-nav.component';
 import { UserNavComponent } from './main/main-nav/authentication-nav/user-nav/user-nav.component';
 import { SwappingStationNavComponent } from './main/main-nav/authentication-nav/swapping-station-nav/swapping-station-nav.component';
@@ -18,6 +17,7 @@ import { VechicleNavComponent } from './main/main-nav/realTime-nav/vechicle-nav/
 import { BatteryNavComponent } from './main/main-nav/realTime-nav/battery-nav/battery-nav.component';
 import { FleetRealtimeNavComponent } from './main/main-nav/realTime-nav/fleet-realtime-nav/fleet-realtime-nav.component';
 import { DockStationNavComponent } from './main/main-nav/realTime-nav/dock-station-nav/dock-station-nav.component';
+import { AuthenticationMainAdminComponent } from './main/main-nav/authentication-nav/authentication-main-admin/authentication-main-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,6 @@ import { DockStationNavComponent } from './main/main-nav/realTime-nav/dock-stati
     MapComponent,
     LeftNavComponent,
     ProfileComponent,
-    AuthenticationMainComponent,
     AdminNavComponent,
     UserNavComponent,
     SwappingStationNavComponent,
@@ -35,6 +34,7 @@ import { DockStationNavComponent } from './main/main-nav/realTime-nav/dock-stati
     BatteryNavComponent,
     FleetRealtimeNavComponent,
     DockStationNavComponent,
+    AuthenticationMainAdminComponent,
   ],
   imports: [
     BrowserModule,
