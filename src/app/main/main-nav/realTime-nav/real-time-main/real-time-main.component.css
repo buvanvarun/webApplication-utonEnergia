@@ -29,3 +29,107 @@
 .hide {
   display: none;
 }
+
+.real-time-main-dashboard-container {
+  position: absolute;
+  top: 72vh;
+  left: 80%;
+  transform: translateX(-80%);
+  width: 35vw;
+  height: 25vh;
+}
+
+.real-time-main-dashboard {
+  position: relative;
+  background-color: #f8f8f8;
+  border: 2px solid black;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.real-time-main-dashboard-top-row {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  width: 100%;
+  height: 50%;
+  flex-direction: row;
+}
+
+.real-time-main-dashboard-vehicle-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.real-time-main-dashboard-battery-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.real-time-main-dashboard-fleet-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.real-time-main-dashboard-geo-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.real-time-main-dashboard-bottom-row {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  width: 100%;
+  height: 50%;
+  flex-direction: row;
+  text-align: center;
+}
+.real-time-main-dashboard-breakdown-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.real-time-main-dashboard-maintenance-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.real-time-main-dashboard-active-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.real-time-main-dashboard-improper-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}

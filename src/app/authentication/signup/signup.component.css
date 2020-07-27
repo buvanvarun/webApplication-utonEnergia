@@ -26,20 +26,25 @@ header {
   font-size: 22px;
   color: white;
 }
-section {
+.content {
+  width: 100%;
   height: 100vh;
 }
 .section-wrapper {
   width: 100%;
-  height: 100vh;
-  opacity: 1;
-  transform: translateY(100px);
-  transition: all 0.5s;
+  height: 100%;
+  animation: showz 0.5s forwards;
 }
 
-.section-wrapper.show {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes showz {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .name-section {
