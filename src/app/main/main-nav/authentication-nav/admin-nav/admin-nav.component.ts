@@ -18,29 +18,7 @@ export class AdminNavComponent implements OnInit {
   option;
   choosenOption = [0, 0, 0, 0, 0, 0, 0, 0];
   admins = ['Buvan', 'Varun', 'Harsha', 'Seenu', 'five'];
-  stats = [
-    {
-      task: 'parking',
-      metric: 133,
-      time: '2hrs',
-      efficiency: '80%',
-      pricing: 'Rs.1400',
-    },
-    {
-      task: 'docking',
-      metric: 113,
-      time: '1hr',
-      efficiency: '60%',
-      pricing: 'Rs.1200',
-    },
-    {
-      task: 'maintain',
-      metric: 153,
-      time: '3hrs',
-      efficiency: '84%',
-      pricing: 'Rs.1600',
-    },
-  ];
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -54,21 +32,5 @@ export class AdminNavComponent implements OnInit {
         this.choosenOption[i] = this.choosenOption[i] === 1 ? 0 : 1;
       }
     });
-  };
-  onAllocateJob = () => {
-    document
-      .querySelector('.admin-nav-job-modal-bg')
-      .classList.add('bg-active');
-  };
-  onClose = () => {
-    document
-      .querySelector('.admin-nav-job-modal-bg')
-      .classList.remove('bg-active');
-  };
-
-  onJobSubmit = () => {
-    document
-      .querySelector('.admin-nav-job-modal-bg')
-      .classList.remove('bg-active');
   };
 }

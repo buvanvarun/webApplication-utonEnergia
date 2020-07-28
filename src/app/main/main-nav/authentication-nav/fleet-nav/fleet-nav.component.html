@@ -1,67 +1,16 @@
+<app-authentication-main-admin></app-authentication-main-admin>
 <main>
   <div class="fleet-nav-container">
     <div class="fleet-nav">
       <div *ngFor="let fleet of fleets" class="fleet">
-        <button id="{{ fleet }}" class="fleet-btn">
+        <button
+          routerLink="/main/authentication/fleet/{{ fleet }}"
+          id="{{ fleet }}"
+          class="fleet-btn"
+        >
           {{ fleet }}
         </button>
       </div>
-    </div>
-  </div>
-  <div class="fleet-nav-details-container">
-    <div class="fleet-nav-profile-details-container">
-      <div class="fleet-nav-profile-img-container">
-        <img
-          class="fleet-nav-profile-img"
-          src="assets/images/profile.jpg"
-          alt=""
-        />
-      </div>
-      <div class="fleet-nav-profile-details">
-        <h3>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quo.
-        </h3>
-        <div class="fleet-nav-profile-credentials-conainter">
-          <img
-            class="fleet-nav-profile-credentials"
-            src="assets/images/profile.jpg"
-            alt=""
-          />
-        </div>
-        <div class="fleet-nav-profile-block-btn-container">
-          <button (click)="onBlock()" class="fleet-nav-profile-block-btn">
-            {{ block ? "UnBlock" : "Block" }} Fleet
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="fleet-nav-profile-stats-container">
-      <table class="fleet-nav-profile-stats">
-        <tr>
-          <th>Tasks</th>
-          <th>Allotted</th>
-          <th>Attended</th>
-          <th>Penalties</th>
-          <th>Dynamic Pricing</th>
-        </tr>
-        <tr *ngFor="let stat of stats">
-          <td>{{ stat.tasks }}</td>
-          <td>{{ stat.allotted }}</td>
-          <td>{{ stat.time }}</td>
-          <td>{{ stat.penalty }}</td>
-          <td>{{ stat.pricing }}</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div class="fleet-nav-block-modal-bg">
-    <div class="fleet-nav-block-modal">
-      <h3>Are you sure you want to {{ block ? "unblock" : "block" }} fleet?</h3>
-      <div class="fleet-nav-block-btn-container">
-        <button (click)="onYes()" class="fleet-nav-block-btn-yes">Yes</button>
-        <button (click)="onNo()" class="fleet-nav-block-btn-no">No</button>
-      </div>
-      <span (click)="onClose()" class="fleet-nav-modal-close">X</span>
     </div>
   </div>
 </main>

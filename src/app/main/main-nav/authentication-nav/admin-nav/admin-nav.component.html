@@ -1,77 +1,16 @@
+<app-authentication-main-admin></app-authentication-main-admin>
 <main>
   <div class="admin-nav-container">
     <div class="admin-nav">
       <div *ngFor="let admin of admins" class="admin">
-        <button id="{{ admin }}" class="admin-btn">
+        <button
+          routerLink="/main/authentication/admin/{{ admin }}"
+          id="{{ admin }}"
+          class="admin-btn"
+        >
           {{ admin }}
         </button>
       </div>
-    </div>
-  </div>
-  <div class="admin-nav-details-container">
-    <div class="admin-nav-profile-details-container">
-      <div class="admin-nav-profile-img-container">
-        <img
-          class="admin-nav-profile-img"
-          src="assets/images/profile.jpg"
-          alt=""
-        />
-      </div>
-      <div class="admin-nav-profile-details">
-        <h3>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quo.
-        </h3>
-        <div class="admin-nav-profile-credentials-conainter">
-          <img
-            class="admin-nav-profile-credentials"
-            src="assets/images/profile.jpg"
-            alt=""
-          />
-        </div>
-        <div class="admin-nav-profile-job-btn-container">
-          <button (click)="onAllocateJob()" class="admin-nav-profile-job-btn">
-            Allocate Job
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="admin-nav-profile-stats-container">
-      <table class="admin-nav-profile-stats">
-        <tr>
-          <th>Tasks</th>
-          <th>Metrics</th>
-          <th>Time Spent</th>
-          <th>Efficiency</th>
-          <th>Dynamic Pricing</th>
-        </tr>
-        <tr *ngFor="let stat of stats">
-          <td>{{ stat.task }}</td>
-          <td>{{ stat.metric }}</td>
-          <td>{{ stat.time }}</td>
-          <td>{{ stat.efficiency }}</td>
-          <td>{{ stat.pricing }}</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div class="admin-nav-job-modal-bg">
-    <div class="admin-nav-job-modal">
-      <div *ngFor="let option of options" class="admin-nav-app-option">
-        <h6 class="app-option-text">{{ option }}</h6>
-        <div
-          id="nav-{{ option }}"
-          (click)="onToggleBtn($event)"
-          class="admin-nav-toggle-btn"
-        >
-          <div class="admin-nav-inner-circle"></div>
-        </div>
-      </div>
-      <div class="admin-nav-job-submit-btn-container">
-        <button (click)="onJobSubmit()" class="admin-nav-job-submit-btn">
-          Submit
-        </button>
-      </div>
-      <span (click)="onClose()" class="admin-nav-modal-close">X</span>
     </div>
   </div>
 </main>

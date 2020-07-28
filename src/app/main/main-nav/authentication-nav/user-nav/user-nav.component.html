@@ -1,8 +1,13 @@
+<app-authentication-main-admin></app-authentication-main-admin>
 <main>
   <div class="user-nav-container">
     <div class="user-nav">
       <div *ngFor="let user of users" class="user">
-        <button id="{{ user }}" class="user-btn">
+        <button
+          routerLink="/main/authentication/user/{{ user }}"
+          id="{{ user }}"
+          class="user-btn"
+        >
           {{ user }}
         </button>
       </div>
@@ -25,62 +30,6 @@
           Geo Location
         </button>
       </div>
-    </div>
-  </div>
-  <div class="user-nav-details-container">
-    <div class="user-nav-profile-details-container">
-      <div class="user-nav-profile-img-container">
-        <img
-          class="user-nav-profile-img"
-          src="assets/images/profile.jpg"
-          alt=""
-        />
-      </div>
-      <div class="user-nav-profile-details">
-        <h3>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quo.
-        </h3>
-        <div class="user-nav-profile-credentials-conainter">
-          <img
-            class="user-nav-profile-credentials"
-            src="assets/images/profile.jpg"
-            alt=""
-          />
-        </div>
-        <div class="user-nav-profile-feedback-btn-container">
-          <button
-            (click)="onViewFeedBack()"
-            class="user-nav-profile-feedback-btn"
-          >
-            View Feed Back
-          </button>
-        </div>
-        <div class="user-nav-profile-coupon-btn-container">
-          <button (click)="onCoupon()" class="user-nav-profile-coupon-btn">
-            Send Coupon
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="user-nav-profile-stats-container">
-      <table class="user-nav-profile-stats">
-        <tr>
-          <th>Rides</th>
-          <th>Metrics</th>
-          <th>Time Spent</th>
-          <th>Penalties</th>
-          <th>Dynamic Pricing</th>
-          <th>Rating</th>
-        </tr>
-        <tr *ngFor="let stat of stats">
-          <td>{{ stat.ride }}</td>
-          <td>{{ stat.metric }}</td>
-          <td>{{ stat.time }}</td>
-          <td>{{ stat.penalty }}</td>
-          <td>{{ stat.pricing }}</td>
-          <td>{{ stat.rating }}</td>
-        </tr>
-      </table>
     </div>
   </div>
 </main>

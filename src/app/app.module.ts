@@ -18,6 +18,10 @@ import { BatteryNavComponent } from './main/main-nav/realTime-nav/battery-nav/ba
 import { FleetRealtimeNavComponent } from './main/main-nav/realTime-nav/fleet-realtime-nav/fleet-realtime-nav.component';
 import { DockStationNavComponent } from './main/main-nav/realTime-nav/dock-station-nav/dock-station-nav.component';
 import { AuthenticationMainAdminComponent } from './main/main-nav/authentication-nav/authentication-main-admin/authentication-main-admin.component';
+import { AdminNavDetailsComponent } from './main/main-nav/authentication-nav/admin-nav/admin-nav-details/admin-nav-details.component';
+import { UserDetailsComponent } from './main/main-nav/authentication-nav/user-nav/user-details/user-details.component';
+import { FleetDetailsComponent } from './main/main-nav/authentication-nav/fleet-nav/fleet-details/fleet-details.component';
+import { SawappingStationDetailsComponent } from './main/main-nav/authentication-nav/swapping-station-nav/sawapping-station-details/sawapping-station-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +39,10 @@ import { AuthenticationMainAdminComponent } from './main/main-nav/authentication
     FleetRealtimeNavComponent,
     DockStationNavComponent,
     AuthenticationMainAdminComponent,
+    AdminNavDetailsComponent,
+    UserDetailsComponent,
+    FleetDetailsComponent,
+    SawappingStationDetailsComponent,
   ],
   imports: [
     BrowserModule,

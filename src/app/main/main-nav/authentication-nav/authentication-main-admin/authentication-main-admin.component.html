@@ -1,31 +1,40 @@
+<app-profile></app-profile>
 <app-left-nav></app-left-nav>
 <main>
   <div class="authentication-main-container">
     <div class="authentication-main-nav">
       <div class="authentication-main-admin">
-        <button class="authentication-main-btn">
+        <button
+          routerLink="/main/authentication/admin"
+          class="authentication-main-btn"
+        >
           Admin
         </button>
       </div>
       <div class="authentication-main-admin">
-        <button class="authentication-main-btn">
+        <button
+          routerLink="/main/authentication/user"
+          class="authentication-main-btn"
+        >
           User
         </button>
       </div>
       <div class="authentication-main-admin">
-        <button class="authentication-main-btn">
+        <button
+          routerLink="/main/authentication/swappingstation"
+          class="authentication-main-btn"
+        >
           Swapping Station
         </button>
       </div>
       <div class="authentication-main-admin">
-        <button class="authentication-main-btn">
+        <button
+          routerLink="/main/authentication/fleet"
+          class="authentication-main-btn"
+        >
           Fleet
         </button>
       </div>
     </div>
   </div>
-  <app-admin-nav class="hide"></app-admin-nav>
-  <app-user-nav class="hide"></app-user-nav>
-  <app-swapping-station-nav class="hide"></app-swapping-station-nav>
-  <app-fleet-nav class="hide"></app-fleet-nav>
 </main>

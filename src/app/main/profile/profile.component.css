@@ -1,4 +1,7 @@
 .profile-container {
+  position: absolute;
+  top: 0%;
+  left: 4%;
   width: 94.9vw;
   height: 20vh;
   background-repeat: no-repeat;

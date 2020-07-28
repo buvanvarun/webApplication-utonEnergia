@@ -29,3 +29,9 @@
 .hide {
   display: none;
 }
+
+app-profile {
+  position: absolute;
+  top: 0;
+  left: 4%;
+}

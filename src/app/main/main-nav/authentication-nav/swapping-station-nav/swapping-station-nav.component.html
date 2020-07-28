@@ -1,52 +1,16 @@
+<app-authentication-main-admin></app-authentication-main-admin>
 <main>
   <div class="swap-nav-container">
     <div class="swap-nav">
       <div *ngFor="let swap of swaps" class="swap">
-        <button id="{{ swap }}" class="swap-btn">
+        <button
+          routerLink="/main/authentication/swappingstation/{{ swap }}"
+          id="{{ swap }}"
+          class="swap-btn"
+        >
           {{ swap }}
         </button>
       </div>
-    </div>
-  </div>
-  <div class="swap-nav-details-container">
-    <div class="swap-nav-profile-details-container">
-      <div class="swap-nav-profile-img-container">
-        <img
-          class="swap-nav-profile-img"
-          src="assets/images/profile.jpg"
-          alt=""
-        />
-      </div>
-      <div class="swap-nav-profile-details">
-        <h3>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quo.
-        </h3>
-        <div class="swap-nav-profile-credentials-conainter">
-          <img
-            class="swap-nav-profile-credentials"
-            src="assets/images/profile.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="swap-nav-profile-stats-container">
-      <table class="swap-nav-profile-stats">
-        <tr>
-          <th>Battery</th>
-          <th>Metrics</th>
-          <th>Time</th>
-          <th>Penalties</th>
-          <th>Dynamic Pricing</th>
-        </tr>
-        <tr *ngFor="let stat of stats">
-          <td>{{ stat.battery }}</td>
-          <td>{{ stat.metric }}</td>
-          <td>{{ stat.time }}</td>
-          <td>{{ stat.penalty }}</td>
-          <td>{{ stat.pricing }}</td>
-        </tr>
-      </table>
     </div>
   </div>
 </main>

@@ -1,0 +1,166 @@
+.admin-nav-details-container {
+  position: absolute;
+  width: 60vw;
+  height: 60vh;
+  background-color: #f8f8f8;
+  border: 1px solid black;
+  border-radius: 30px;
+  top: 26vh;
+  left: 36.5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.admin-nav-profile-details-container {
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+.admin-nav-profile-img-container {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.admin-nav-profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.admin-nav-profile-details {
+  width: 200px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.admin-nav-profile-details h3 {
+  font-size: 16px;
+  font-weight: 300;
+  color: #1d1d1f;
+}
+
+.admin-nav-profile-credentials-container {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.admin-nav-profile-credentials {
+  width: 40px;
+  height: 40px;
+}
+
+.admin-nav-profile-job-btn-container {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.admin-nav-profile-job-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  padding: 6px 6px;
+}
+
+.admin-nav-app-option {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: space-between;
+}
+
+.admin-nav-toggle-btn {
+  width: 35px;
+  height: 22px;
+  background: gray;
+  border-radius: 30px;
+  padding: 3px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.admin-nav-toggle-btn > .admin-nav-inner-circle {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.admin-nav-toggle-btn.active {
+  background: #18b84f;
+}
+
+.admin-nav-job-modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+.admin-nav-job-modal {
+  position: relative;
+  background-color: white;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.admin-nav-toggle-btn.active > .admin-nav-inner-circle {
+  margin-left: 15px;
+}
+
+.admin-nav-job-submit-btn-container {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.admin-nav-job-submit-btn {
+  background-color: #18b84f;
+  color: white;
+  border: none;
+  border-radius: 12px;
+}
+.admin-nav-profile-stats-container {
+  position: relative;
+  left: 80px;
+  top: 40px;
+}
+.admin-nav-profile-stats {
+  align-items: center;
+}
+
+th,
+td {
+  padding: 10px;
+}
+tr {
+  font-size: 16px;
+}
+
+.admin-nav-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
