@@ -1,0 +1,28 @@
+.vehicle-nav-container {
+  position: absolute;
+  width: 15vw;
+  background-color: #353b48;
+  border: 1px solid black;
+  border-radius: 30px;
+  top: 30vh;
+  left: 20.5%;
+  height: 20vh;
+}
+
+.vehicle-nav {
+  height: 100%;
+  position: relative;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.user-nav-btn {
+  background-color: #4b4b4b;
+  color: white;
+  padding: 6px 6px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+}

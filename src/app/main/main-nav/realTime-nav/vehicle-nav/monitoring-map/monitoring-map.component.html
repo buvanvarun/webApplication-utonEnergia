@@ -1,0 +1,17 @@
+<app-vehicle-nav></app-vehicle-nav>
+<agm-map [latitude]="latitude" [longitude]="longitude">
+  <agm-marker
+    (markerClick)="clickedMarker(infowindow)"
+    [latitude]="lat"
+    [longitude]="lng"
+    [label]="'M'"
+  >
+    <agm-info-window [disableAutoPan]="false" #infowindow>
+      <div>
+        hello there , this is an info window
+      </div>
+    </agm-info-window>
+  </agm-marker>
+  <agm-marker [latitude]="lat2" [longitude]="lng2" [iconUrl]="icon">
+  </agm-marker>
+</agm-map>

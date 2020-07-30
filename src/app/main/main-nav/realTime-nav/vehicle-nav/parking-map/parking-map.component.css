@@ -1,0 +1,8 @@
+agm-map {
+  position: absolute;
+  top: 26vh;
+  left: 43vw;
+  width: 55vw;
+  height: 70vh;
+  z-index: 5;
+}

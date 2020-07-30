@@ -9,12 +9,4 @@ export class RealTimeMainComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  onVehicleClick = () => {};
-
-  onBatteryClick = () => {};
-
-  onFleetClick = () => {};
-
-  onDockClick = () => {};
 }

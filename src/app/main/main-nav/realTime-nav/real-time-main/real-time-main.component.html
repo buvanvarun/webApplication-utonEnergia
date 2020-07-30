@@ -1,23 +1,25 @@
+<app-profile></app-profile>
+<app-left-nav></app-left-nav>
 <main>
   <div class="real-time-main-container">
     <div class="real-time-main-nav">
       <div class="real-time-main-admin">
-        <button (click)="onVehicleClick()" class="real-time-main-btn">
+        <button routerLink="/main/realtime/vehicle" class="real-time-main-btn">
           Vehicle
         </button>
       </div>
       <div class="real-time-main-admin">
-        <button (click)="onBatteryClick()" class="real-time-main-btn">
+        <button class="real-time-main-btn">
           Battery
         </button>
       </div>
       <div class="real-time-main-admin">
-        <button (click)="onFleetClick()" class="real-time-main-btn">
+        <button class="real-time-main-btn">
           Fleet
         </button>
       </div>
       <div class="real-time-main-admin">
-        <button (click)="onDockClick()" class="real-time-main-btn">
+        <button class="real-time-main-btn">
           Docking Station
         </button>
       </div>

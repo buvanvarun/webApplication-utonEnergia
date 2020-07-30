@@ -4,7 +4,7 @@
   background-color: #f8f8f8;
   border: 1px solid black;
   border-radius: 30px;
-  top: 36vh;
+  top: 26vh;
   left: 4.5%;
 }
 .real-time-main-nav {
@@ -33,8 +33,8 @@
 .real-time-main-dashboard-container {
   position: absolute;
   top: 72vh;
-  left: 80%;
-  transform: translateX(-80%);
+  left: 5%;
+  /* transform: translateX(-%); */
   width: 35vw;
   height: 25vh;
 }

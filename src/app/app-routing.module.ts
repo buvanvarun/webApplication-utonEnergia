@@ -14,6 +14,10 @@ import { FleetNavComponent } from './main/main-nav/authentication-nav/fleet-nav/
 import { FleetDetailsComponent } from './main/main-nav/authentication-nav/fleet-nav/fleet-details/fleet-details.component';
 import { SwappingStationNavComponent } from './main/main-nav/authentication-nav/swapping-station-nav/swapping-station-nav.component';
 import { SawappingStationDetailsComponent } from './main/main-nav/authentication-nav/swapping-station-nav/sawapping-station-details/sawapping-station-details.component';
+import { RealTimeMainComponent } from './main/main-nav/realTime-nav/real-time-main/real-time-main.component';
+import { VehicleNavComponent } from './main/main-nav/realTime-nav/vehicle-nav/vehicle-nav.component';
+import { ParkingMapComponent } from './main/main-nav/realTime-nav/vehicle-nav/parking-map/parking-map.component';
+import { MonitoringMapComponent } from './main/main-nav/realTime-nav/vehicle-nav/monitoring-map/monitoring-map.component';
 const routes: Routes = [
   { path: '', component: AuthenticationMainComponent },
   { path: 'signup', component: SignupComponent },
@@ -36,6 +40,13 @@ const routes: Routes = [
   {
     path: 'main/authentication/swappingstation/:id',
     component: SawappingStationDetailsComponent,
+  },
+  { path: 'main/realtime', component: RealTimeMainComponent },
+  { path: 'main/realtime/vehicle', component: VehicleNavComponent },
+  { path: 'main/realtime/vehicle/parking', component: ParkingMapComponent },
+  {
+    path: 'main/realtime/vehicle/monitoring',
+    component: MonitoringMapComponent,
   },
   { path: '**', component: PageNotFoundComponent },
 ];

@@ -13,7 +13,6 @@ import { UserNavComponent } from './main/main-nav/authentication-nav/user-nav/us
 import { SwappingStationNavComponent } from './main/main-nav/authentication-nav/swapping-station-nav/swapping-station-nav.component';
 import { FleetNavComponent } from './main/main-nav/authentication-nav/fleet-nav/fleet-nav.component';
 import { RealTimeMainComponent } from './main/main-nav/realTime-nav/real-time-main/real-time-main.component';
-import { VechicleNavComponent } from './main/main-nav/realTime-nav/vechicle-nav/vechicle-nav.component';
 import { BatteryNavComponent } from './main/main-nav/realTime-nav/battery-nav/battery-nav.component';
 import { FleetRealtimeNavComponent } from './main/main-nav/realTime-nav/fleet-realtime-nav/fleet-realtime-nav.component';
 import { DockStationNavComponent } from './main/main-nav/realTime-nav/dock-station-nav/dock-station-nav.component';
@@ -22,6 +21,9 @@ import { AdminNavDetailsComponent } from './main/main-nav/authentication-nav/adm
 import { UserDetailsComponent } from './main/main-nav/authentication-nav/user-nav/user-details/user-details.component';
 import { FleetDetailsComponent } from './main/main-nav/authentication-nav/fleet-nav/fleet-details/fleet-details.component';
 import { SawappingStationDetailsComponent } from './main/main-nav/authentication-nav/swapping-station-nav/sawapping-station-details/sawapping-station-details.component';
+import { VehicleNavComponent } from './main/main-nav/realTime-nav/vehicle-nav/vehicle-nav.component';
+import { ParkingMapComponent } from './main/main-nav/realTime-nav/vehicle-nav/parking-map/parking-map.component';
+import { MonitoringMapComponent } from './main/main-nav/realTime-nav/vehicle-nav/monitoring-map/monitoring-map.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,6 @@ import { SawappingStationDetailsComponent } from './main/main-nav/authentication
     SwappingStationNavComponent,
     FleetNavComponent,
     RealTimeMainComponent,
-    VechicleNavComponent,
     BatteryNavComponent,
     FleetRealtimeNavComponent,
     DockStationNavComponent,
@@ -43,6 +44,9 @@ import { SawappingStationDetailsComponent } from './main/main-nav/authentication
     UserDetailsComponent,
     FleetDetailsComponent,
     SawappingStationDetailsComponent,
+    VehicleNavComponent,
+    ParkingMapComponent,
+    MonitoringMapComponent,
   ],
   imports: [
     BrowserModule,
