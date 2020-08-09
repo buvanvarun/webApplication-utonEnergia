@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-admin-nav',
   templateUrl: './admin-nav.component.html',
@@ -17,11 +21,15 @@ export class AdminNavComponent implements OnInit {
   ];
   option;
   choosenOption = [0, 0, 0, 0, 0, 0, 0, 0];
-  admins = ['Buvan', 'Varun', 'Harsha', 'Seenu', 'five'];
+  admins: Observable<any[]>;
 
-  constructor() {}
+  constructor(
+    private afs: AngularFirestore
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.admins = this.afs.collection('admins').valueChanges({idField: 'adminID'});
+  }
 
   onToggleBtn = (event: Event) => {
     this.option = document.querySelectorAll('.admin-nav-toggle-btn');
