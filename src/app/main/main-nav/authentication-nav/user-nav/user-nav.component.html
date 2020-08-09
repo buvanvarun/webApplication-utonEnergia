@@ -2,13 +2,13 @@
 <main>
   <div class="user-nav-container">
     <div class="user-nav">
-      <div *ngFor="let user of users" class="user">
+      <div *ngFor="let user of users | async" class="user">
         <button
-          routerLink="/main/authentication/user/{{ user }}"
+          routerLink="/main/authentication/user/{{ user.userID }}"
           id="{{ user }}"
           class="user-btn"
         >
-          {{ user }}
+          {{user.name}} {{ user.phoneNumber }}
         </button>
       </div>
     </div>

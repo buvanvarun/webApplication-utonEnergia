@@ -24,6 +24,25 @@ import { SawappingStationDetailsComponent } from './main/main-nav/authentication
 import { VehicleNavComponent } from './main/main-nav/realTime-nav/vehicle-nav/vehicle-nav.component';
 import { ParkingMapComponent } from './main/main-nav/realTime-nav/vehicle-nav/parking-map/parking-map.component';
 import { MonitoringMapComponent } from './main/main-nav/realTime-nav/vehicle-nav/monitoring-map/monitoring-map.component';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDTKXESb2k0ok7B-xeAaVBD0jmoB2AKv1M",
+  authDomain: "uton-energia.firebaseapp.com",
+  databaseURL: "https://uton-energia.firebaseio.com",
+  projectId: "uton-energia",
+  storageBucket: "uton-energia.appspot.com",
+  messagingSenderId: "994824375191",
+  appId: "1:994824375191:web:c6bb69de8ebc3ea85bd2d2",
+  measurementId: "G-D9G19WJPY6"
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +69,12 @@ import { MonitoringMapComponent } from './main/main-nav/realTime-nav/vehicle-nav
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireStorageModule,
+    AngularFireAuthModule,
+    AngularFireAuthGuardModule,
+    AngularFirestoreModule,
+    AngularFireFunctionsModule,
     FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
