@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireFunctions } from '@angular/fire/functions';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-admin-nav-details',
@@ -43,6 +48,10 @@ export class AdminNavDetailsComponent implements OnInit {
     },
   ];
 
+  admin: Observable<any>;
+  adminID = '';
+  adminStatus = 'new';
+
   onAllocateJob = () => {
     document
       .querySelector('.admin-nav-job-modal-bg')
@@ -59,7 +68,36 @@ export class AdminNavDetailsComponent implements OnInit {
       .querySelector('.admin-nav-job-modal-bg')
       .classList.remove('bg-active');
   };
-  constructor() {}
+  constructor(
+    public firestore: AngularFirestore,
+    private fns: AngularFireFunctions,
+    private route: ActivatedRoute
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.adminID = (params as any).params.id;
+      this.admin = this.firestore.collection('admins').doc(this.adminID).valueChanges();
+      this.updateAdminStatus();
+    });
+  }
+
+  updateAdminStatus() {
+    const roleCallable = this.fns.httpsCallable('getRoleStatus');
+    roleCallable({uid: this.adminID}).toPromise().then(resStatus => {
+      this.adminStatus = resStatus.role;
+    });
+  }
+
+  setRole(adminID: string, role: string) {
+    const setRollCallable = this.fns.httpsCallable('setRole');
+    setRollCallable({uid: adminID, role: role}).toPromise().then(roleStatus => {
+      this.adminStatus = roleStatus;
+    });
+  }
+
+  setAdmin() {
+    this.setRole(this.adminID, 'admin');
+  }
+
 }

@@ -11,7 +11,16 @@
       </div>
       <div class="user-nav-profile-details">
         <h3>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quo.
+          {{(user | async)?.name}}
+        </h3>
+        <h3>
+          {{(user | async)?.phoneNumber}}
+        </h3>
+        <h3>
+          {{(user | async)?.email}}
+        </h3>
+        <h3>
+          {{userVerificationStatus}}
         </h3>
         <div class="user-nav-profile-credentials-conainter">
           <img
@@ -54,6 +63,16 @@
           <td>{{ stat.rating }}</td>
         </tr>
       </table>
+      <div style="display: flex; flex-direction: row;">
+        <div *ngFor="let license of userLicense" style="display: flex; flex-direction: row; padding: 20px;">
+          <img [src]="license" style="width: 200px;"/>
+        </div>
+        <div *ngFor="let identity of userIdentity" style="display: flex; flex-direction: row; padding: 20px;">
+          <img [src]="identity" style="width: 200px;"/>
+        </div>
+      </div>
+      <button (click)="onVerifyUser(true)">Verify User</button>
+      <button (click)="onVerifyUser(false)">Unverify User</button>
     </div>
   </div>
 </main>

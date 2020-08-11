@@ -18,35 +18,46 @@ import { RealTimeMainComponent } from './main/main-nav/realTime-nav/real-time-ma
 import { VehicleNavComponent } from './main/main-nav/realTime-nav/vehicle-nav/vehicle-nav.component';
 import { ParkingMapComponent } from './main/main-nav/realTime-nav/vehicle-nav/parking-map/parking-map.component';
 import { MonitoringMapComponent } from './main/main-nav/realTime-nav/vehicle-nav/monitoring-map/monitoring-map.component';
+
+import { AngularFireAuthGuard, canActivate, customClaims, AuthPipe, redirectLoggedInTo } from '@angular/fire/auth-guard';
+import { map } from 'rxjs/operators';
+import { pipe } from 'rxjs';
+
+const hasRole: (claim: string) => AuthPipe =
+  (claim) => pipe(customClaims, map(claims =>  claims.role == claim));
+
+const adminOnly = () => hasRole('admin');
+const redirectLoggedInToMain = () => redirectLoggedInTo(['main']);
+
 const routes: Routes = [
-  { path: '', component: AuthenticationMainComponent },
+  { path: '', component: AuthenticationMainComponent, ...canActivate(redirectLoggedInToMain) },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
-  { path: 'main', component: MainComponent },
-  { path: 'main/authentication', component: AuthenticationMainAdminComponent },
-  { path: 'main/authentication/admin', component: AdminNavComponent },
+  { path: 'main', component: MainComponent, ...canActivate(adminOnly) },
+  { path: 'main/authentication', component: AuthenticationMainAdminComponent, ...canActivate(adminOnly) },
+  { path: 'main/authentication/admin', component: AdminNavComponent, ...canActivate(adminOnly) },
   {
     path: 'main/authentication/admin/:id',
-    component: AdminNavDetailsComponent,
+    component: AdminNavDetailsComponent, ...canActivate(adminOnly)
   },
-  { path: 'main/authentication/user', component: UserNavComponent },
-  { path: 'main/authentication/user/:id', component: UserDetailsComponent },
-  { path: 'main/authentication/fleet', component: FleetNavComponent },
-  { path: 'main/authentication/fleet/:id', component: FleetDetailsComponent },
+  { path: 'main/authentication/user', component: UserNavComponent, ...canActivate(adminOnly) },
+  { path: 'main/authentication/user/:id', component: UserDetailsComponent, ...canActivate(adminOnly) },
+  { path: 'main/authentication/fleet', component: FleetNavComponent, ...canActivate(adminOnly) },
+  { path: 'main/authentication/fleet/:id', component: FleetDetailsComponent, ...canActivate(adminOnly) },
   {
     path: 'main/authentication/swappingstation',
-    component: SwappingStationNavComponent,
+    component: SwappingStationNavComponent, ...canActivate(adminOnly)
   },
   {
     path: 'main/authentication/swappingstation/:id',
-    component: SawappingStationDetailsComponent,
+    component: SawappingStationDetailsComponent, ...canActivate(adminOnly)
   },
-  { path: 'main/realtime', component: RealTimeMainComponent },
-  { path: 'main/realtime/vehicle', component: VehicleNavComponent },
-  { path: 'main/realtime/vehicle/parking', component: ParkingMapComponent },
+  { path: 'main/realtime', component: RealTimeMainComponent, ...canActivate(adminOnly) },
+  { path: 'main/realtime/vehicle', component: VehicleNavComponent, ...canActivate(adminOnly) },
+  { path: 'main/realtime/vehicle/parking', component: ParkingMapComponent, ...canActivate(adminOnly) },
   {
     path: 'main/realtime/vehicle/monitoring',
-    component: MonitoringMapComponent,
+    component: MonitoringMapComponent, ...canActivate(adminOnly)
   },
   { path: '**', component: PageNotFoundComponent },
 ];

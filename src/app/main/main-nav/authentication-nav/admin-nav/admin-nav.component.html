@@ -2,13 +2,13 @@
 <main>
   <div class="admin-nav-container">
     <div class="admin-nav">
-      <div *ngFor="let admin of admins" class="admin">
+      <div *ngFor="let admin of admins | async" class="admin">
         <button
-          routerLink="/main/authentication/admin/{{ admin }}"
-          id="{{ admin }}"
+          routerLink="/main/authentication/admin/{{ admin.adminID }}"
+          id="{{ admin.adminID }}"
           class="admin-btn"
         >
-          {{ admin }}
+          {{ admin.name }} {{admin.email}}
         </button>
       </div>
     </div>

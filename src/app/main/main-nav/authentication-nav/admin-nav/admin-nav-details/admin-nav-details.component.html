@@ -5,24 +5,33 @@
       <div class="admin-nav-profile-img-container">
         <img
           class="admin-nav-profile-img"
-          src="assets/images/profile.jpg"
+          [src]="(admin | async)?.photoURL"
           alt=""
         />
       </div>
       <div class="admin-nav-profile-details">
         <h3>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quo.
+          {{(admin | async)?.name}}
+        </h3>
+        <h3>
+          {{(admin | async)?.email}}
+        </h3>
+        <h3>
+          {{adminStatus}}
         </h3>
         <div class="admin-nav-profile-credentials-conainter">
           <img
             class="admin-nav-profile-credentials"
-            src="assets/images/profile.jpg"
+            [src]="(admin | async)?.photoURL"
             alt=""
           />
         </div>
         <div class="admin-nav-profile-job-btn-container">
           <button (click)="onAllocateJob()" class="admin-nav-profile-job-btn">
             Allocate Job
+          </button>
+          <button (click)="setAdmin()" class="admin-nav-profile-job-btn" style="margin: 20px;" *ngIf="adminStatus!='admin'">
+            Approve Admin
           </button>
         </div>
       </div>

@@ -1,36 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-user-nav',
   templateUrl: './user-nav.component.html',
   styleUrls: ['./user-nav.component.css'],
 })
 export class UserNavComponent implements OnInit {
-  users = [
-    'user1',
-    'user2',
-    'user3',
-    'user4',
-    'user5',
-    'user6',
-    'user7',
-    'user8',
-    'user9',
-    'user10',
-    'user11',
-    'user12',
-    'user13',
-    'user14',
-    'user15',
-    'user16',
-    'user17',
-    'user18',
-    'user19',
-    'user20',
-    'user21',
-  ];
+  users: Observable<any[]>
 
-  constructor() {}
+  constructor(
+    public firestore: AngularFirestore
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.users = this.firestore.collection('users').valueChanges({idField: 'userID'});
+  }
 }
