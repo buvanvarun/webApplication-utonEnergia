@@ -11,13 +11,13 @@
       </div>
       <div class="admin-nav-profile-details">
         <h3>
-          {{(admin | async)?.name}}
+          {{ (admin | async)?.name }}
         </h3>
         <h3>
-          {{(admin | async)?.email}}
+          {{ (admin | async)?.email }}
         </h3>
         <h3>
-          {{adminStatus}}
+          {{ adminStatus }}
         </h3>
         <div class="admin-nav-profile-credentials-conainter">
           <img
@@ -30,7 +30,12 @@
           <button (click)="onAllocateJob()" class="admin-nav-profile-job-btn">
             Allocate Job
           </button>
-          <button (click)="setAdmin()" class="admin-nav-profile-job-btn" style="margin: 20px;" *ngIf="adminStatus!='admin'">
+          <button
+            (click)="setAdmin()"
+            class="admin-nav-profile-job-btn"
+            style="margin: 20px;"
+            *ngIf="adminStatus != 'admin'"
+          >
             Approve Admin
           </button>
         </div>

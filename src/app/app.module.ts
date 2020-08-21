@@ -33,14 +33,14 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDTKXESb2k0ok7B-xeAaVBD0jmoB2AKv1M",
-  authDomain: "uton-energia.firebaseapp.com",
-  databaseURL: "https://uton-energia.firebaseio.com",
-  projectId: "uton-energia",
-  storageBucket: "uton-energia.appspot.com",
-  messagingSenderId: "994824375191",
-  appId: "1:994824375191:web:c6bb69de8ebc3ea85bd2d2",
-  measurementId: "G-D9G19WJPY6"
+  apiKey: 'AIzaSyDTKXESb2k0ok7B-xeAaVBD0jmoB2AKv1M',
+  authDomain: 'uton-energia.firebaseapp.com',
+  databaseURL: 'https://uton-energia.firebaseio.com',
+  projectId: 'uton-energia',
+  storageBucket: 'uton-energia.appspot.com',
+  messagingSenderId: '994824375191',
+  appId: '1:994824375191:web:c6bb69de8ebc3ea85bd2d2',
+  measurementId: 'G-D9G19WJPY6',
 };
 
 @NgModule({

@@ -23,12 +23,12 @@ export class AdminNavComponent implements OnInit {
   choosenOption = [0, 0, 0, 0, 0, 0, 0, 0];
   admins: Observable<any[]>;
 
-  constructor(
-    private afs: AngularFirestore
-  ) {}
+  constructor(private afs: AngularFirestore) {}
 
   ngOnInit(): void {
-    this.admins = this.afs.collection('admins').valueChanges({idField: 'adminID'});
+    this.admins = this.afs
+      .collection('admins')
+      .valueChanges({ idField: 'adminID' });
   }
 
   onToggleBtn = (event: Event) => {

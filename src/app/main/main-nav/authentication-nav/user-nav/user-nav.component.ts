@@ -9,13 +9,13 @@ import { Observable } from 'rxjs';
   styleUrls: ['./user-nav.component.css'],
 })
 export class UserNavComponent implements OnInit {
-  users: Observable<any[]>
+  users: Observable<any[]>;
 
-  constructor(
-    public firestore: AngularFirestore
-  ) {}
+  constructor(public firestore: AngularFirestore) {}
 
   ngOnInit(): void {
-    this.users = this.firestore.collection('users').valueChanges({idField: 'userID'});
+    this.users = this.firestore
+      .collection('users')
+      .valueChanges({ idField: 'userID' });
   }
 }

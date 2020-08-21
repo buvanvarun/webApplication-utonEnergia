@@ -11,11 +11,11 @@
 .admin-nav {
   height: 60vh;
   position: relative;
-  left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: left;
+  align-items: center;
+  left: 20px;
 }
 
 .admin-btn {
@@ -25,4 +25,6 @@
   font-size: 18px;
   border: none;
   border-radius: 10px;
+  width: 85%;
+  word-break: normal;
 }

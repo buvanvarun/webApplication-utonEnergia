@@ -75,29 +75,35 @@ export class AdminNavDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       this.adminID = (params as any).params.id;
-      this.admin = this.firestore.collection('admins').doc(this.adminID).valueChanges();
+      this.admin = this.firestore
+        .collection('admins')
+        .doc(this.adminID)
+        .valueChanges();
       this.updateAdminStatus();
     });
   }
 
   updateAdminStatus() {
     const roleCallable = this.fns.httpsCallable('getRoleStatus');
-    roleCallable({uid: this.adminID}).toPromise().then(resStatus => {
-      this.adminStatus = resStatus.role;
-    });
+    roleCallable({ uid: this.adminID })
+      .toPromise()
+      .then((resStatus) => {
+        this.adminStatus = resStatus.role;
+      });
   }
 
   setRole(adminID: string, role: string) {
     const setRollCallable = this.fns.httpsCallable('setRole');
-    setRollCallable({uid: adminID, role: role}).toPromise().then(roleStatus => {
-      this.adminStatus = roleStatus;
-    });
+    setRollCallable({ uid: adminID, role: role })
+      .toPromise()
+      .then((roleStatus) => {
+        this.adminStatus = roleStatus;
+      });
   }
 
   setAdmin() {
     this.setRole(this.adminID, 'admin');
   }
-
 }
